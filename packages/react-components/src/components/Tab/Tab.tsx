@@ -14,8 +14,6 @@ export const Tabs: FC<TabsProps> & { Tab: FC<{ label: string }> } = ({
 
   const childrens = Children.toArray(children);
 
-  console.log(childrens);
-
   return (
     <>
       <div>

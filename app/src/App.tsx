@@ -1,20 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import { render } from "react-dom";
-import { Tabs } from "react-components";
+import { Tabs, Greeting, useLocalStorage } from "react-components";
 
 export const App = () => {
+  const [value] = useLocalStorage({ key: "Greeting" });
+
   return (
-    <Tabs>
-      <Tabs.Tab label="Tab1">
-        <p>Content Tab 1</p>
-      </Tabs.Tab>
-      <Tabs.Tab label="Tab2">
-        <p>Content Tab 2</p>
-      </Tabs.Tab>
-      <Tabs.Tab label="Tab3">
-        <p>Content Tab 3</p>
-      </Tabs.Tab>
-    </Tabs>
+    <>
+      <Tabs>
+        <Tabs.Tab label="Tab1">
+          <Greeting />
+          <p>{value}</p>
+        </Tabs.Tab>
+        <Tabs.Tab label="Tab2">
+          <p>Content Tab 2</p>
+        </Tabs.Tab>
+        <Tabs.Tab label="Tab3"></Tabs.Tab>
+      </Tabs>
+    </>
   );
 };
 

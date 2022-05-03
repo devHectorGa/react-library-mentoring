@@ -1,8 +1,8 @@
-import { Children, isValidElement, ReactNode } from "react";
+import { Children, isValidElement, ReactNode, FC } from "react";
 
 export const childrenOrDefault = (
   children: ReactNode,
-  type: Element,
+  type: FC,
   defaultComponent: ReactNode
 ): ReactNode =>
   Children.toArray(children).find((c) =>

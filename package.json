@@ -13,7 +13,6 @@
   },
   "scripts": {
     "app": "yarn workspace app",
-    "counter": "yarn workspace counter",
     "components": "yarn workspace react-components"
   }
 }

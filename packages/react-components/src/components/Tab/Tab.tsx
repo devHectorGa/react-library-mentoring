@@ -8,21 +8,19 @@ export const Tabs: FC<TabsProps> & { Tab: FC<{ label: string }> } = ({
   children,
   initialTab = 0,
 }) => {
-  const [activeTab, setActiveTab] = useState(
-    initialTab > 0 ? initialTab - 1 : 0
-  );
+  const [, setActiveTab] = useState(initialTab > 0 ? initialTab - 1 : 0);
 
   const childrens = Children.toArray(children);
 
   return (
     <>
       <div>
-        {childrens.map((children, index) => (
+        {childrens.map((_, index) => (
           <button onClick={() => setActiveTab(index)}>
-            {children?.props?.label}
+            {/* {children?.props?.label} */}
           </button>
         ))}
-        {childrens[activeTab]?.props?.children}
+        {/* {childrens[activeTab]?.props?.children} */}
       </div>
     </>
   );

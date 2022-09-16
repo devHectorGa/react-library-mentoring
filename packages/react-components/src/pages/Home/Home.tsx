@@ -1,10 +1,10 @@
-import React from "react";
-import { Layout } from "antd";
-import { MenuComponent } from "../../components/Menu";
-import { childrenOrDefault } from "../../utils";
-import { ContainerProps } from "../PagesTypes";
-import { HomeProps } from "./Home.types";
-import { HomeContent } from "./HomeContent";
+import React from 'react';
+import { Layout } from 'antd';
+import { MenuComponent } from '../../components/Menu';
+import { childrenOrDefault } from '../../utils';
+import { ContainerProps } from '../PagesTypes';
+import { HomeProps } from './Home.types';
+import { HomeContent } from './HomeContent';
 
 const { Header, Content, Footer } = Layout;
 

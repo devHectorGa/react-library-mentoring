@@ -1,3 +1,5 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from 'react';
 
-export type ContainerProps<T = {}, G = {}> = FC<T> & { Content: FC<G> };
+export type ContainerProps<T = {}, G = {}> = FC<PropsWithChildren<T>> & {
+  Content: FC<PropsWithChildren<G>>;
+};
